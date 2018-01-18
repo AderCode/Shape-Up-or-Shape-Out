@@ -1,0 +1,43 @@
+
+
+#easle {
+    position: relative;
+    margin: 100px 0 0 0;
+    background-color: rgb(179, 179, 179);
+    border: solid 2px;
+    height: 600px;
+    width: 600px;
+}
+
+#btns {
+    display: inline-flex;
+    flex-flow: row wrap;
+}
+
+.square {
+    position: absolute;
+    background-color: red;
+}
+
+.rectangle {
+    position: absolute;
+    background-color: green;
+}
+
+.triangle {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: purple;
+}
+
+
+
+#stats, #easle {
+    display: inline-block;
+}

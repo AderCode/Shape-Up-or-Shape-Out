@@ -6,22 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="btn-container">
+    <div id="btns">
         <div class="circle-parameters">
             <button class="create-circle">Draw Circle</button>
+            <input class="circle-input" type="text" placeholder="Radius 0 - 600">
         </div>
         <div class="triangle-parameters">
             <button class="create-triangle">Draw Triangle</button>
+            <input class="triangle-input" type="text" placeholder="Height  0 - 600">
         </div>
         <div class="rectangle-parameters">
             <button class="create-rectangle">Draw Rectangle</button>
+            <input class="rectangle-width-input" type="text" placeholder="Width  0 - 600">
+            <input class="rectangle-height-input" type="text" placeholder="Height  0 - 600">
         </div>
         <div class="square-parameters">
             <button class="create-square">Draw Square</button>
+            <input class="square-input" type="text" placeholder="Side Length  0 - 600">
         </div>
+    </div>
+    <div id="easle">
+
+    </div>
+    <div id="stats">
+        Shape: <br>
+        Height: <br>
+        Width: <br>
+        Radius: <br>
+        Area: <br>
+        Perimeter: <br>
     </div>
 
     <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
