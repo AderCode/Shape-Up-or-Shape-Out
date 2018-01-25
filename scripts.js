@@ -3,12 +3,6 @@
 //Counter
 let created = 0;
 
-//Storage Arrays
-let circlesOnScreen = [];
-let trianglesOnScreen = [];
-let rectanglesOnScreen = [];
-let squaresOnScreen = [];
-
 //Make life easier things
 let body = $("body");
 let btnContainer = $("#btns");
@@ -62,20 +56,17 @@ createRectangleBtn.click(function() {
   new Rectangle(heightInput, widthInput);
 }
 });
+
+//Create Square Button Actions //
 createSquareBtn.click(function() {
-  console.log("Draw Square Button has been clicked.");
-  console.log(`A div should have generated.`);
   let sideLengthVal = $('.square-input').val();
-  console.log(`Square: Side Length = ${$('.square-input').val()}`);
-  if (sideLengthVal >= max) {
-    alert('Enter a number between 0 - 600')
-} else {
   new Square(sideLengthVal);
-}
-//   new Shape(xVal, yVal).style();
+  console.log($('.square-input').val());
 });
+// // // //               // // // //
 
 // // CLASS AND SUBCLASSES // //
+// Parent Class //
 class Shape {
   constructor(height, width) {
     //Parent Class Properties
@@ -83,7 +74,6 @@ class Shape {
     this.width = width;
     this.area = parseInt(this.width) * parseInt(this.height);
     this.radius = 'Radius is resevered for circles... Stupid...';
-
   }
   //Parent Class Methods
   describe() {
@@ -143,6 +133,7 @@ class Shape {
   
 }
 
+// Child Classes //
 class Circle extends Shape {
   constructor(radius) {
     //Inherited Properties go in Super(here, here)
@@ -175,7 +166,7 @@ class Triangle extends Shape {
     this.perimeter = 2 * this.height + Math.sqrt(2) * this.height;
     this.div.css({
         'border-bottom': `solid ${height}px yellow`,
-        'border-right': ` solid ${height}px transparent`
+        'border-right': `solid ${height}px transparent`
     })
     this.div.css({
         'height': '0',
